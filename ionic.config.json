@@ -1,0 +1,7 @@
+{
+  "name": "App-150-aniversario",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
