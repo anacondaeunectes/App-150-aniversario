@@ -7,14 +7,22 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">{{ folder }}</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" *ngIf="folder === 'Saludos' || folder === 'Actos'">
+  <ion-card *ngFor="let saludo of saludos">
+    <ion-img src={{saludo.img}} style="height: 200px; width: 100%;"></ion-img>
+    <ion-card-header>
+      <ion-card-subtitle>{{saludo.subtitle}}</ion-card-subtitle>
+      <ion-card-title>{{saludo.title}}</ion-card-title>
+    </ion-card-header>
 
-  <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-  </div>
+    <ion-card-content style="text-align: justify;" *ngIf="!saludo.truncating && saludo.content.length > limit">
+      {{saludo.content}}
+    </ion-card-content>
+    <ion-card-content style="text-align: right;">
+      <ion-button style="text-transform:none" size="small" (click)="saludo.truncating = false"
+        *ngIf="saludo.truncating === true">Mostrar</ion-button>
+      <ion-button  style="text-transform:none" size="small" (click)="saludo.truncating = true"
+        *ngIf="saludo.truncating === false">Ocultar</ion-button>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
