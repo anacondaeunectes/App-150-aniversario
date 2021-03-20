@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CountdownComponent } from 'ngx-countdown';
 
 @Component({
   selector: 'app-folder',
@@ -8,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class FolderPage implements OnInit {
   public folder: string;
-
+  
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
