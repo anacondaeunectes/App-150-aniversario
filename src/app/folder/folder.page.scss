@@ -26,3 +26,41 @@ ion-menu-button {
 #container a {
   text-decoration: none;
 }
+
+ion-content {
+  --background: url(../../assets/imagenes/background.jpg) ;
+  text-align: center;
+}
+
+#divBotones {
+  background-color: rgba(252, 252, 252, 0.5);;
+  width: 80%; height: 90%;
+  text-align: center;
+  margin-left: 10%;
+  margin-top: 10%;
+  border-style: ridge ;
+  border-color: rgb(76, 197, 96);
+  border-width: 4px;
+
+  
+}
+
+/*#button1{
+  --animate-delay: 0.5s;
+}
+#button2{
+  --animate-delay: 6s;
+  
+}
+#button3{
+  --animate-delay: 1.5s;
+}
+#button4{
+  --animate-delay: 2s;
+}
+#button5{
+  --animate-delay: 2.5s;
+}*/
+
+
+
